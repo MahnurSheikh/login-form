@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Add basic styling if needed */
+        /* .form {
+            width: 300px;
+            margin: 50px auto;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer; */
+        /* }
+    </style> */
+</head>
+<body>
+    <div class="login">
+        <form class="form">
+            <h1>Login</h1>
+            <label id="lebel">User Name:</label>
+            <input type="text" placeholder="Enter Your Name" id="name" required><br>
+            <label id="lebel" for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="Enter Your Email" required><br>
+
+            <label  for="password" id="lebel">Password:</label>
+            <div style="position: relative;">
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <i class="fa fa-eye eye-icon" id="eyeIconPassword"></i>
+            </div><br>
+
+            <button id="LoginBtn" type="button">Login</button>
+            <p>Don't have an Account? <a href="index.html">Signup</a></p>
+        </form>
+    </div>
+
+    <script>
+        // Password toggle function
+        function togglePassword(fieldId, iconId) {
+            let passwordField = document.getElementById(fieldId);
+            let eyeIcon = document.getElementById(iconId);
+
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+
+        // Login button functionality
+        document.getElementById('LoginBtn').addEventListener('click', function() {
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; 
+
+            // Validate email
+            if (!emailPattern.test(email)) {
+                alert("Email is not valid");
+                return;
+            }
+
+            if (!regexp.test(password)) {
+    alert("Password must be strong and at least 8 characters");
+    return;
+  }
+            // Show success message if everything is fine
+            alert(`Welcome back, ${email}! Login successful.`);
+          
+        });
+
+        // Attach toggle events for password field visibility
+        document.getElementById('eyeIconPassword').addEventListener('click', function() {
+            togglePassword('password', 'eyeIconPassword');
+            document.getElementsByClassName('form').reset()
+        });
+    </script>
+</body>
+</html>

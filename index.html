@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login">
+        <form class="form">
+            <h1>Register Now</h1>
+            <label id="lebel">User Name:</label>
+            <input type="text" placeholder="Enter Your Name" id="name" required><br>
+            
+            <label id="lebel">Email Address:</label>
+            <input type="email" placeholder="Enter Your Email" id="email" required><br>
+            
+            <label id="lebel">Create Password:</label>
+            <div style="position: relative;">
+                <input type="password" placeholder="Enter New Password" id="password" required>
+                <span id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                    <i id="eyeIconPassword" class="fa fa-eye"></i>
+                </span>
+            </div><br>
+            
+            <label id="lebel">Confirm Password:</label>
+            <div style="position: relative;">
+                <input type="password" placeholder="Confirm Password" id="cpass" required>
+                <span id="toggleCPassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                    <i id="eyeIconCPassword" class="fa fa-eye"></i>
+                </span>
+            </div><br>
+            
+            <button id="Signup">Signup</button>
+            <p>Already have an Account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+
+  
+    <script src="index.js"></script>
+</body>
+</html>

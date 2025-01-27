@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-image: url(t\ 4.avif);
+    background-size: cover;
+    background-repeat: no-repeat;  */
+
+
+    
+    
+}
+.login{
+    border: 1px solid rgb(43, 28, 43);
+    border-radius: 1rem;
+    box-shadow: 0 0 15px ;
+    width: 33rem;
+    height: 42rem;
+    overflow: hidden;
+       background-image: url(t\ 4.avif);
+    background-size: cover;
+    background-repeat: no-repeat;  
+
+     
+}
+.form {
+    display: grid;
+    place-content: center;
+    box-sizing: border-box;
+    background: transparent;
+    height: 100% 
+    
+}
+h1 {
+    display: grid;
+    place-content: center;
+    margin-top: 10px;
+    font-size: 30px;
+        
+    margin-bottom: 35px;
+    color: rgb(14, 14, 161);
+}
+input {
+    background: transparent;
+    width: 18rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 5px;
+}
+::placeholder {
+    color: rgb(120, 116,119);
+    padding: 4px;
+}
+#lebel {
+    font: 1.1rem;
+    padding: 0.3rem;
+    color:  rgb(54, 54, 148);
+    font-weight: bold;
+}
+button {
+    margin-top: 2rem;
+    width: 19rem;
+    height: 2.4rem;
+    border: solid; color: blue;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+p {
+    margin: 0.1rem ;
+    padding: 0.3rem;
+    color: black;
+    font-weight: bold;
+
+}
+a {
+    cursor: pointer;
+    font-weight: bold;
+    color: blue
+}
+
+  button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+    color: #ffffff; 
+  }
+  
+  button:active {
+    transform: scale(1); 
+  }
+  #togglePassword {
+    font-size: 18px;
+    color: gray;
+  }
+  #togglePassword:hover {
+    color: black; /* Change color on hover */
+  }
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;  
+  }
